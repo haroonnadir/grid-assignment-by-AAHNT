@@ -1,0 +1,68 @@
+
+body { 
+    display: grid;
+    grid-template-areas: 
+      "header header"
+      "nav article"
+      "nav ads"
+      "footer footer";
+    grid-template-rows: 80px 1fr;  
+    grid-template-columns: 20% 1fr;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    height: 100vh;
+    margin: 0;
+    }  
+header, nav, article, div, footer {
+    padding: 20PX;
+    background: rgb(50, 205, 195);
+    }
+.webheader {
+    grid-area: header;
+    }
+.navbar { 
+    grid-area: nav; 
+    }
+.mainarticle { 
+    grid-area: article;      
+    }
+.googleadds { 
+    grid-area: ads; 
+    } 
+.webfooter {
+    grid-area: footer;
+    }
+  /* Stack the layout on small devices/viewports. */
+@media all and (max-width: 600px) {
+    body {
+    background-color: green; 
+      grid-template-areas: 
+        "header"
+        "nav"
+        "article"
+        "ads"
+        "footer";
+      grid-template-rows: 80px 1fr;  
+      grid-template-columns: 1fr;
+   }
+   header{
+    padding: 20PX;
+    background: rgb(50, 205, 68);
+}
+nav{
+    padding: 20PX;
+    background: rgb(205, 179, 50);
+    }
+article{
+    padding: 20PX;
+    background: rgb(205, 50, 84);
+    }
+div{
+    padding: 20PX;
+    background: rgb(50, 205, 195);
+    }
+footer {
+    padding: 20PX;
+    background: rgb(205, 50, 50);
+    }
+  }
